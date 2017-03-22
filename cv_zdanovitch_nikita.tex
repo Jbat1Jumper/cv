@@ -17,7 +17,8 @@
 \usepackage[a4paper,margin=0.75in]{geometry}
 
 % Setup the language.
-\usepackage[spanish]{babel}
+\usepackage[english, spanish]{babel}
+%\usepackage[spanish, english]{babel}
 \usepackage[utf8]{inputenc}
 \hyphenation{Some-long-word}
 
@@ -25,6 +26,12 @@
 \usepackage{resume}
 
 
+% Opens this to the world
+\usepackage{ifthen}
+\newboolean{in_english}  
+\setboolean{in_english}{false} 
+
+\newcommand{\lang}[2]{\ifthenelse{\boolean{in_english}}{#1}{#2}}
 
 
 \begin{document}  % begin the content of the document
@@ -32,7 +39,7 @@
 
 
 % title on top of the document
-\maintitle{Zdanovitch Nikita}{Desarrollador de Software}{Última actualización el \today}
+\maintitle{Zdanovitch Nikita}{\lang{Software Developer}{Desarrollador de Software}}{\lang{Last update at}{Última actualización el} \today}
 
 \nobreakvspace{0.3em}  % add some page break averse vertical spacing
 
@@ -46,10 +53,11 @@
 %\textsmaller{}15-2403-9260\sbull
 %{\newnums cies010} \emph{(Skype)}\sbull
 %\href{http://www.abc.com/}{www.abc.com/} \\
-Domicilio: Condarco 3193 \sbull Capital Federal, Villa del Parque \\
-Nacionalidad: Ruso \sbull
-Estado civil: Soltero sin hijos \\
-Teléfono: 15-2403-9260 \sbull
+\lang{Buenos Aires}{Domicilio: Cuba 3609} \sbull
+\lang{Argentina}{Capital Federal, Nuñez} \\
+\lang{Nationality: Russian}{Nacionalidad: Ruso} \sbull
+\lang{Marital status: Single}{Estado civil: Soltero sin hijos} \\
+\lang{Phone: +54 11 2403 9260}{Teléfono: 15-2403-9260} \sbull
 Mail: \href{mailto:nzdanovitch.at.gmail.dot.com}{nzdanovitch\mbox{}@\mbox{}gmail.com}
 % \thinspace {\large \sc A}\sbull
 
@@ -57,7 +65,7 @@ Mail: \href{mailto:nzdanovitch.at.gmail.dot.com}{nzdanovitch\mbox{}@\mbox{}gmail
 \spacedhrule{1.2em}{-0.4em}  % a horizontal line with some vertical spacing before and after
 
 
-\roottitle{Resumen}  % a root section title
+\roottitle{\lang{Summary}{Resumen}}  % a root section title
 
 \vspace{-1.3em}  % some vertical spacing
 \begin{multicols}{2}  % open a multicolumn environment
@@ -65,12 +73,17 @@ Mail: \href{mailto:nzdanovitch.at.gmail.dot.com}{nzdanovitch\mbox{}@\mbox{}gmail
 %\emph{Creative geek with roots in the open source movement, an entrepreneurial mindset and a passion for delivering value by developing maintainable software.}
 %\\
 %\\
+\lang{%
+Computer Science student at UBA
+}{%
 Estudiante de Licenciatura en Ciencias de la Computación de la Facultad de Ciencias Exactas y Naturales de la UBA.
 Cuento con 3 años de experiencia en el campo de IT centrado en el desarrollo de software.
 Estoy constantemente buscando problemas para tener excusas para no dormir y poder resolverlos mientras tanto,
 así como también pasarme horas probando tecnologías nuevas.
 Me interesa el ámbito de R\&D como también el de desarrollo de videojuegos, las cuales son cosas a las que les
 suelo dedicar mi tiempo libre y me gustaría dedicarme profesionalmente.
+}
+
 \end{multicols}
 
 
