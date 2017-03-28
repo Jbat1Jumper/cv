@@ -28,8 +28,8 @@
 
 % Opens this to the world
 \usepackage{ifthen}
-\newboolean{in_english}  
-\setboolean{in_english}{false} 
+\newboolean{in_english}
+\setboolean{in_english}{false}
 
 \newcommand{\lang}[2]{\ifthenelse{\boolean{in_english}}{#1}{#2}}
 
@@ -111,32 +111,20 @@ suelo dedicar mi tiempo libre y me gustaría dedicarme profesionalmente.
 
 \vspace{0.2em}
 \headedsection
-  {Facultad de Ciencias Exactas y Naturales de la UBA}
+  {\lang{Faculty of Exact and Natural Sciences of the University of Buenos Aires}{Facultad de Ciencias Exactas y Naturales de la UBA}}
   {\textsc{}} {%
   \headedsubsection
-    {Licenciatura en Ciencias de la Computación}
-    {2013 --\  Hoy \ }{}
-  \headedsubsection
-    {Ciclo Básico Común}
-    {2012 -- 2013}{}
+    {\lang{Undergraduate Bachelor of Computer Science}{Licenciatura en Ciencias de la Computación}}
+    {2013 --\ \lang{Today}{Hoy} \ }{}
 }
 
 \vspace{0.2em}
 \headedsection
-  {Escuela Técnica N\textordmasculine1 ``Otto Krause''}
+  {\lang{Technical High School}{Escuela Técnica} N\textordmasculine1 ``Otto Krause''}
   {\textsc{}} {%
   \headedsubsection
-    {Especialidad Electrónica}
-    {2009 -- 2012} {}
-}
-
-\vspace{0.2em}
-\headedsection
-  {Escuela Técnica N\textordmasculine25 ``Fray Luis Beltran''}
-  {\textsc{}} {%
-  \headedsubsection
-    {Ciclo Básico}
-    {2006 -- 2009} {}
+    {\lang{Electronics technician}{Especialidad Electrónica}}
+    {2007 -- 2012} {}
 }
 
 \vspace{0.2em}
