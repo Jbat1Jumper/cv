@@ -5,6 +5,28 @@
 \hyphenation{Some-long-word}
 
 \usepackage{resume}
+\usepackage{tikz}
+
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
 
 
 \begin{document}
@@ -86,15 +108,15 @@ I'm interested in working professionally in the ambit of R\&D and game design, s
   {Courses}
   {\textsc{}} {%
   \headedsubsection
-    {Protecting the data confidentiality and integrity on the web}
+    {Protecting the data confidentiality and integrity on the web \href{http://www.dc.uba.ar/events/eci/2015/cursos/russo}{\ExternalLink}}
     {2015}{\\
     ECI, dictated in the Faculty of Exact and Natural Sciences of the UBA}
   \headedsubsection
-    {Current methods on machine learning}
+    {Current methods on machine learning \href{http://www.dc.uba.ar/events/eci/2014/cursos/granitto}{\ExternalLink}}
     {2014}{\\
     ECI, dictated in the Faculty of Exact and Natural Sciences of the UBA}
   \headedsubsection
-    {Graph-based Representation and Reasoning in Artificial Intelligence}
+    {Graph-based Representation and Reasoning in Artificial Intelligence \href{http://www.dc.uba.ar/events/eci/2013/cursos/curso-croitoru}{\ExternalLink}}
     {2013}{\\
     ECI, dictated in the Faculty of Exact and Natural Sciences of the UBA}
   \headedsubsection
@@ -106,7 +128,7 @@ I'm interested in working professionally in the ambit of R\&D and game design, s
 
 \spacedhrule{0.8em}{-0.4em}
 
-\roottitle{Experiencia laboral}
+\roottitle{Working Experience}
 
 \vspace{0.2em}
 \headedsection
@@ -114,7 +136,7 @@ I'm interested in working professionally in the ambit of R\&D and game design, s
     {\textsc{}}{
     \headedsubsection
         {Full Stack Developer}
-        {2016 -- Hoy}
+        {2016 -- Today}
         {\\I'm currently working at one of the must successful e-commerces in Brazil, using a wide stack of technologies like Python, PHP, Node and Docker}
 }
 
@@ -125,7 +147,7 @@ I'm interested in working professionally in the ambit of R\&D and game design, s
     \headedsubsection
         {Software Developer}
         {2013 -- 2016}
-        {\\Worked on software and games for video lottery systems, using technologies like .Net/Mono and HTML5}
+        {\\Worked on software and games for video lottery systems, using technologies like .Net/Mono and HTML5 canvas \href{http://www.infobiz.com.ar/english/ticket_games.php}{\ExternalLink}}
 }
 
 \vspace{0.2em}
@@ -145,7 +167,7 @@ I'm interested in working professionally in the ambit of R\&D and game design, s
     \headedsubsection
         {Freelance Software Developer}
         {2013 - 2014}
-        {\\I developed a turn management system for queues and waiting rooms, made in Python with HTML5 frontend}
+        {\\I developed a turn management system for queues and waiting rooms, made in Python with HTML5 frontend \href{http://www.eitsa.com.ar/producto.php?c=3&p=14}{\ExternalLink}}
 }
 
 \pagebreak
@@ -156,7 +178,7 @@ I'm interested in working professionally in the ambit of R\&D and game design, s
 
 \vspace{0.2em}
 \headedsection
-    {\href{http://globalgamejam.org/2016/games/nirvana-sky}{Nirvana Sky}}
+    {Nirvana Sky \href{http://globalgamejam.org/2016/games/nirvana-sky}{\ExternalLink}}
     {\textsc{}}{
     \headedsubsection
         {Mobile videogame for Global Game Jam}
@@ -166,7 +188,7 @@ I'm interested in working professionally in the ambit of R\&D and game design, s
 
 \vspace{0.2em}
 \headedsection
-    {\href{http://globalgamejam.org/2015/games/triple-quest}{Triple Quest}}
+    {Triple Quest \href{http://globalgamejam.org/2015/games/triple-quest}{\ExternalLink}}
     {\textsc{}}{
     \headedsubsection
         {Mobile videogame for Global Game Jam}
