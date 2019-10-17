@@ -3,30 +3,9 @@
 \usepackage[spanish, english]{babel}
 \usepackage[utf8]{inputenc}
 \hyphenation{Some-long-word}
-
 \usepackage{resume}
-\usepackage{tikz}
+\input{macros.tex}
 
-\newcommand{\ExternalLink}{%
-    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
-        \begin{scope}[x=1ex, y=1ex]
-            \clip (-0.1,-0.1) 
-                --++ (-0, 1.2) 
-                --++ (0.6, 0) 
-                --++ (0, -0.6) 
-                --++ (0.6, 0) 
-                --++ (0, -1);
-            \path[draw, 
-                line width = 0.5, 
-                rounded corners=0.5] 
-                (0,0) rectangle (1,1);
-        \end{scope}
-        \path[draw, line width = 0.5] (0.5, 0.5) 
-            -- (1, 1);
-        \path[draw, line width = 0.5] (0.6, 1) 
-            -- (1, 1) -- (1, 0.6);
-        }
-    }
 
 
 \begin{document}
@@ -45,7 +24,9 @@ Marital status: Single \\
 Phone: +54 11 2403 9260 \sbull
 Mail: \href{mailto:nzdanovitch.at.gmail.dot.com}{nzdanovitch\mbox{}@\mbox{}gmail.com}
 
-\spacedhrule{1.2em}{-0.4em}
+
+\spacedhrule{1.2em}{-0.4em}  % ...............................................................................
+
 
 
 
@@ -54,32 +35,30 @@ Mail: \href{mailto:nzdanovitch.at.gmail.dot.com}{nzdanovitch\mbox{}@\mbox{}gmail
 \vspace{-1.3em}
 \begin{multicols}{2}
 \noindent
-A Computer Science student at the Faculty of Exact and Natural Sciences of the University of Buenos Aires, I also have 4 years of experience working in software development.
-I am constantly looking for problems to puzzle my mind, so I can use them as an excuse to not sleep and solve them.
-I am always looking for new technologies to try and explore innovative ways to develop software.
-I'm interested in working professionally in the ambit of R\&D and game design, since nowadays it already is a hobby in my spare time.
+
+A Computer Science student at the Faculty of Exact and Natural Sciences of
+the University of Buenos Aires. Nowadays I have 7 years of experience working
+in the area of software development.
+
+On the one hand, I have special academic interest in the field of artificial
+intelligence, particularly KR and learning theory. On the other hand, I am
+passionate about software architecture and meta programming.
+
+Much of my spare time goes to chimerical projects which work as fuel for
+learning and one of my goals is to dedicate myself to combine science and
+playful experiences.
+
+
+% I am constantly looking for problems to puzzle my mind, so I can use them as an excuse to not sleep and solve them.
+% I am always looking for new technologies to try and explore innovative ways to develop software.
+%
+%
+% I'm interested in working professionally in the ambit of R\&D and game design, since nowadays it already is a hobby in my spare time.
+
 \end{multicols}
 
-\spacedhrule{0.3em}{-0.4em}
 
-
-
-\roottitle{Knowledge}
-
-\inlineheadsection
-  {Specialized in:}
-  {Programming in Python, C\# and Javascript. Software design and architecture. Unix, virtualization and continuous integration.}
-
-\inlineheadsection
-  {With experience in:}
-  {Programming in C/C++, Haxe, PHP, Node, Haskell and Java. \LaTeX. Game development. Frontend development with HTML5, CSS, Less/Sass, JQuery, Ember.js and Meteor.js. Sql databases and MongoDb.}
-
-  \vspace{0.5em}
-\inlineheadsection
-  {Languages:}
-  {Spanish \emph{(native)}, Russian \emph{(native)}, English \emph{(intermediate)}, Portuguese \emph{(basic)}.}
-
-\spacedhrule{1.9em}{-0.4em}
+\spacedhrule{0.3em}{-0.4em} % ...............................................................................
 
 
 
@@ -87,124 +66,193 @@ I'm interested in working professionally in the ambit of R\&D and game design, s
 
 \vspace{0.2em}
 \headedsection
-  {Faculty of Exact and Natural Sciences of the University of Buenos Aires}
-  {\textsc{}} {%
+  { Faculty of Exact and Natural Sciences of the University of Buenos Aires }
+  { \textsc{} } {%
   \headedsubsection
-    {Undergraduate Bachelor of Computer Science}
-    {2013 --\ Today \ }{}
+    { Undergraduate Bachelor of Computer Science }
+    { 2013 --\ Today \ }{}
 }
 
 \vspace{0.2em}
 \headedsection
-  {Technical High School Nº1 'Otto Krause', Buenos Aires}
-  {\textsc{}} {%
+  { Technical High School Nº1 'Otto Krause', Buenos Aires }
+  { \textsc{} } {%
   \headedsubsection
-    {Electronics technician}
-    {2007 -- 2012} {}
-}
-
-\vspace{0.2em}
-\headedsection
-  {Courses}
-  {\textsc{}} {%
-  \headedsubsection
-    {Protecting the data confidentiality and integrity on the web \href{http://www.dc.uba.ar/events/eci/2015/cursos/russo}{\ExternalLink}}
-    {2015}{\\
-    ECI, dictated in the Faculty of Exact and Natural Sciences of the UBA}
-  \headedsubsection
-    {Current methods on machine learning \href{http://www.dc.uba.ar/events/eci/2014/cursos/granitto}{\ExternalLink}}
-    {2014}{\\
-    ECI, dictated in the Faculty of Exact and Natural Sciences of the UBA}
-  \headedsubsection
-    {Graph-based Representation and Reasoning in Artificial Intelligence \href{http://www.dc.uba.ar/events/eci/2013/cursos/curso-croitoru}{\ExternalLink}}
-    {2013}{\\
-    ECI, dictated in the Faculty of Exact and Natural Sciences of the UBA}
-  \headedsubsection
-    {Java programming course}
-    {2012}{\\
-    'Digital Natives' program, dictated in the ET Nº1 'Otto Krause'}
+    { Electronics technician }
+    { 2007 -- 2012 } {}
 }
 
 
-\spacedhrule{0.8em}{-0.4em}
+\vspace{0.2em}
 
-\roottitle{Working Experience}
+\headedsection
+  { Courses }
+  { \textsc{} } {%
+  \headedsubsection
+    { Java programming course }
+    { 2012 }{ \\ 'Digital Natives' program, dictated in the THS Nº1 'Otto Krause' }
+}
+
+
+\iffalse \headedsection
+  { ECIs and optional assignatures }
+  { \textsc{}} {%
+  \headedsubsection
+    { Natural language processing with nerual networks }
+    { 2019 }{ \\ ECI, dictated in the Faculty of Exact and Natural Sciences of the UBA }
+  \headedsubsection
+    { Neural deep learning }
+    { 2019 }{ \\ ECI, dictated in the Faculty of Exact and Natural Sciences of the UBA }
+  \headedsubsection
+    { Probabilistic classifiers in machine learning }
+    { 2019 }{ \\ ECI, dictated in the Faculty of Exact and Natural Sciences of the UBA }
+  \headedsubsection
+    { About belief change }
+    { 2019 }{ \\ Optional assignature of the Faculty of Exact and Natural Sciences of the UBA }
+  \headedsubsection
+    { Graphics processors architecture and applications }
+    { 2018 }{ \\ ECI, dictated in the Faculty of Exact and Natural Sciences of the UBA }
+  \headedsubsection
+    { Computational methods for studying language in the brain }
+    { 2018 }{ \\ ECI, dictated in the Faculty of Exact and Natural Sciences of the UBA }
+  \headedsubsection
+    { Protecting the data confidentiality and integrity on the web }
+    { 2015 }{ \\ ECI, dictated in the Faculty of Exact and Natural Sciences of the UBA }
+  \headedsubsection
+    { Current methods on machine learning }
+    { 2014 }{ \\ ECI, dictated in the Faculty of Exact and Natural Sciences of the UBA }
+  \headedsubsection
+    { Graph-based Representation and Reasoning in Artificial Intelligence }
+    { 2013 }{ \\ ECI, dictated in the Faculty of Exact and Natural Sciences of the UBA }
+} \fi
+
+
+\spacedhrule{0.8em}{-0.4em} % ...............................................................................
+
+
+
+
+
+\roottitle{Knowledge}
+
+\inlineheadsection
+  { Specialized in: }
+  { Programming in C\#, Python and Rust. Software design and architecture. Unix, virtualization and continuous integration.}
+
+\inlineheadsection
+  { With experience in: }
+  { Programming in C/C++, Haxe, Haskell, Java, Node, PHP, Node and Prolog. \LaTeX, OpenNLP and Protobuf. Videogame development. Frontend development with HTML5, CSS, Less/Sass, JQuery, Ember.js and Angular. Sql and Mongo databases. }
+
+  \vspace{0.5em}
+\inlineheadsection
+  { Languages: }
+  { Spanish \emph{(native)}, Russian \emph{(native)}, English \emph{(intermediate)}, Portuguese \emph{(basic)}.}
+
+
+\spacedhrule{1.9em}{-0.4em} % ...............................................................................
+
+
+
+
+
+\roottitle{ Working Experience }
 
 \vspace{0.2em}
 \headedsection
-    {Trocafone S.A.}
-    {\textsc{}}{
+    { ADGS }
+    { \textsc{} }{
     \headedsubsection
-        {Full Stack Developer}
-        {2016 -- Today}
-        {\\I'm currently working at one of the must successful e-commerces in Brazil, using a wide stack of technologies like Python, PHP, Node and Docker}
+        { Software Developer }
+        { 2019 -- Today }
+        { \\ Ontologies for semantic analysis engine in .Net \href{http://www.tasmo.ai/}{\ExternalLink} }
 }
 
 \vspace{0.2em}
 \headedsection
-    {Infobiz S.A.}
-    {\textsc{}}{
+    { Trocafone S.A. }
+    { \textsc{} }{
     \headedsubsection
-        {Software Developer}
-        {2013 -- 2016}
-        {\\Worked on software and games for video lottery systems, using technologies like .Net/Mono and HTML5 canvas \href{http://www.infobiz.com.ar/english/ticket_games.php}{\ExternalLink}}
+        { Full Stack Developer }
+        { 2016 -- 2018 }
+        { \\ ERP system in PHP and stock management microservice in Python and Docker }
 }
 
 \vspace{0.2em}
 \headedsection
-    {Exo S.A.}
-    {\textsc{}}{
+    { Infobiz S.A. }
+    { \textsc{} }{
     \headedsubsection
-        {Trainee Software Developer}
-        {2013}
+        { Software Developer }
+        { 2013 -- 2016 }
+        { \\ Software and games for video lottery systems using .Net/Mono and HTML5 canvas \href{http://www.infobiz.com.ar/english/ticket_games.php}{\ExternalLink} }
+}
+
+\vspace{0.2em}
+\headedsection
+    { Exo S.A. }
+    { \textsc{} }{
+    \headedsubsection
+        { Trainee Software Developer }
+        { 2013 }
         {}
 }
 
 \vspace{0.2em}
 \headedsection
-    {Urban Technologies}
-    {\textsc{}}{
+    { Urban Technologies }
+    { \textsc{} }{
     \headedsubsection
-        {Freelance Software Developer}
-        {2013 - 2014}
-        {\\I developed a turn management system for queues and waiting rooms, made in Python with HTML5 frontend \href{http://www.eitsa.com.ar/producto.php?c=3&p=14}{\ExternalLink}}
+        { Freelance Software Developer }
+        { 2013 - 2014}
+        { \\ Turn management system for queues and waiting rooms, made in Python and HTML5 \href{http://www.eitsa.com.ar/producto.php?c=3&p=14}{\ExternalLink} }
 }
 
 \pagebreak
 
-\spacedhrule{0.8em}{-0.4em}
+\spacedhrule{0.8em}{-0.4em} % ...............................................................................
 
-\roottitle{Other Experiences and Projects}
+\roottitle{ Other Experiences and Projects }
 
 \vspace{0.2em}
 \headedsection
-    {Nirvana Sky \href{http://globalgamejam.org/2016/games/nirvana-sky}{\ExternalLink}}
-    {\textsc{}}{
+    { Poncho II: Pónchosis \href{https://globalgamejam.org/2018/games/poncho-ii-p\%C3\%B3nchosis}{\ExternalLink} }
+    { \textsc{} }{
     \headedsubsection
-        {Mobile videogame for Global Game Jam}
-        {2016}
-        {\\Developed in 48 hours with Godot Engine}
+        { Mobile videogame for Global Game Jam }
+        { 2018 }
+        { \\ Developed in 48 hours with Unity3d }
 }
 
 \vspace{0.2em}
 \headedsection
-    {Triple Quest \href{http://globalgamejam.org/2015/games/triple-quest}{\ExternalLink}}
-    {\textsc{}}{
+    { Nirvana Sky \href{http://globalgamejam.org/2016/games/nirvana-sky}{\ExternalLink} }
+    { \textsc{} }{
     \headedsubsection
-        {Mobile videogame for Global Game Jam}
-        {2015}
-        {\\Developed in 48 hours with Unity3d}
+        { Mobile videogame for Global Game Jam }
+        { 2016 }
+        { \\ Developed in 48 hours with Godot Engine }
 }
 
 \vspace{0.2em}
 \headedsection
-    {\href{}{National Olympiad of Electronics and Telecommunications}}
-    {\textsc{}}{
+    { Triple Quest \href{http://globalgamejam.org/2015/games/triple-quest}{\ExternalLink} }
+    { \textsc{} }{
     \headedsubsection
-        {Double Gold Medal in theoretical competition}
-        {2012}
-        {\\In individual and group competition, held in Blas Pascal University, Córdoba, Argentina}
+        { Mobile videogame for Global Game Jam }
+        { 2015 }
+        { \\ Developed in 48 hours with Unity3d }
 }
+
+\vspace{0.2em}
+\headedsection
+    { \href{}{National Olympiad of Electronics and Telecommunications} }
+    { \textsc{} }{
+    \headedsubsection
+        { Double Gold Medal in theoretical competitions }
+        { 2012 }
+        { \\ In individual and group categories -- held in Blas Pascal University, Córdoba, Argentina }
+}
+
 
 \end{document}
 
