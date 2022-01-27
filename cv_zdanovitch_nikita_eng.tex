@@ -18,12 +18,13 @@
 
 \noindent
 Buenos Aires \sbull
-Argentina \\
+Argentina \vspace{3pt} \\
 Nationality: Argentinian / Russian \sbull
-Marital status: Single \\
-Phone: +54 911 2403 9260 \sbull
+Marital status: Single \sbull
+Phone: +54 911 2403 9260 \vspace{3pt} \\
 Mail: \href{mailto:nzdanovitch.at.gmail.dot.com}{nzdanovitch\mbox{}@\mbox{}gmail.com} \sbull
-Github: \href{http://github.com/Jbat1Jumper}{Jbat1Jumper}
+Github: \href{http://github.com/Jbat1Jumper}{Jbat1Jumper} \sbull
+Linkedin: \href{https://www.linkedin.com/in/nikita-zdanovitch}{/in/nikita-zdanovitch}
 
 
 \spacedhrule{1.2em}{-0.4em}  % ...............................................................................
@@ -81,7 +82,7 @@ software.
   { \textsc{} } {%
   \headedsubsection
     { Undergraduate Bachelor of Computer Science }
-    { 2013 --\ Today \ }{}
+    { 2013 --\ Today \ }{ }
 }
 
 \vspace{0.2em}
@@ -103,6 +104,20 @@ software.
     { Java programming course }
     { 2012 }{ \\ 'Digital Natives' program, dictated in the THS Nº1 'Otto Krause' }
 }
+
+\spacedhrule{0.8em}{-0.4em} % ...............................................................................
+\roottitle{ Awards }
+
+\vspace{0.2em}
+\headedsection
+    { \href{}{National Olympiad of Electronics and Telecommunications} }
+    { \textsc{} }{
+    \headedsubsection
+        { Double Gold Medal in theoretical competitions }
+        { 2012 }
+        { \\ In individual and group categories -- held in Blas Pascal University, Córdoba, Argentina }
+}
+
 
 
 \iffalse \headedsection
@@ -157,160 +172,129 @@ software.
   \vspace{0.5em}
 \inlineheadsection
   { Languages: }
-  { Spanish \emph{(native)}, Russian \emph{(native)}, English \emph{(intermediate)} and Portuguese \emph{(basic)}.}
+  { Spanish \emph{(native)}, Russian \emph{(native)}, English \emph{(advanced)} and Portuguese \emph{(intermediate)}.}
 
 
 \spacedhrule{1.9em}{-0.4em} % ...............................................................................
 
 
+\newcommand{\jobdescription}[5]{
+    \vspace{0.2em}
+    \headedsection{ #1 }{ \textit{ #3 } }{
+        \headedsubsection{ #2 }{}{
 
-\newcommand{\jobdetail}[2]{
+            \small
+            \leftskip=10pt
+            \rightskip=40pt
+            #4
+            
+            \vspace{5pt}
+            \footnotesize
+            #5
 
-    \small
-    \leftskip=10pt
-    \rightskip=60pt
-    #1
-    
-    \vspace{5pt}
-    \footnotesize
-    #2
-
+        }
+    }
 }
 
 \roottitle{ Working Experience }
 
-\vspace{0.2em}
-\headedsection
+\jobdescription
     { Software Engineer }
-    { \textit{Oct 2020 -- \ \ \ Today\ \ \ \  } }{
-    \headedsubsection
-        { Trocafone S.A. }
-        {}
-        {
-            \jobdetail{
-                As a software engineer at Trocafone my work consists mostly on
-                developing features for the in-house ERP software.
-            }{
-                PHP - Laravel - Postgres - Typescript - Node.js - NestJS - Jenkins - Docker
-            }
-        }
-}
-
-\vspace{0.2em}
-\headedsection
-    { Inria - Parietal Team }
-    { \textsc{} }{
-    \headedsubsection
-        { Research Intern }
-        { Mar 2020 -- Sep 2020 }
-        { 
-            \jobdetail{
-                As a research intern at the Parietal team my goal was to develop a domain specific language based on natural English to use as an interface to NeuroLang. Neurolang is an open-source python library that enables the analysis of neuro-imaging data through probabilistic logic programming. It seamlessly allow to combine, images, databases, and ontologies within a single framework.
-
-                During my internship I studied how to translate sentences from a subset of first order logic into datalog and then how to interpret a controlled subset of English grammar into the former subset using discourse representation theory.
-
-                I developed a module in Python for the NeuroLang package consisting of an implementation of a non-deterministic parser and the transformations required for a small subset of the query language. It is sill an ongoing work and part of my computer science thesis at University of Buenos Aires.
-            }{
-                Python - NeuroLang - Datalog - DSL - Open Source
-            }
-
-        }
-}
-
-\vspace{0.2em}
-\headedsection
-    { ADGS }
-    { \textsc{} }{
-    \headedsubsection
-        { Software Developer }
-        { Nov 2018 -- Feb 2020 }
-        { 
-            \jobdetail{
-                As a software developer at ADGS I worked helping to develop an unstructured search, semantic extraction and machine learning framework called TASMO. My job consisted primarily on developing a set of criteria for entity extraction from unstructured text and for connotation analysis for medical, financial and legal texts.
-            }{
-                C\# - .Net Framework - Solr - OpenNLP - GATE - AWS - Azure
-            }
-        }
-}
-
-\vspace{0.2em}
-\headedsection
     { Trocafone S.A. }
-    { \textsc{} }{
-    \headedsubsection
-        { Full Stack Developer }
-        { Jun 2016 -- Jan 2019 }
-        { 
-            \jobdetail{
-                As a software developer at Trocafone my work consisted mostly on developing features for the in-house ERP software. My focus was given to create opportunities of technological improvement seeking better efficiency in the SCM area. Between one of the biggest projects I had the pleasure to work on was the development and deployment in production of a microservice to centralize stock management.
-            }{
-                PHP - Laravel - Python - Flask - Postgres - Jenkins - Docker
-            }
-        }
-}
+    { Oct 2020 -- Today }
+    {
+        As a software engineer at Trocafone my work consists mostly on
+        designing, developing and maintaining new features for the in-house ERP software.
+    }
+    {
+        PHP - Laravel - Postgres - Typescript - Node.js - NestJS - Jenkins - Docker
+    }
 
-\vspace{0.2em}
-\headedsection
+\jobdescription
+    { Research Intern }
+    { Inria - Parietal Team }
+    { Mar 2020 -- Sep 2020 }
+    { 
+        As a research intern at the Parietal team my goal was to develop a domain specific language based on natural English to use as an interface to NeuroLang. Neurolang is an open-source python library that enables the analysis of neuro-imaging data through probabilistic logic programming. It seamlessly allow to combine, images, databases, and ontologies within a single framework.
+
+        During my internship I studied how to translate sentences from a subset of first order logic into datalog and then how to interpret a controlled subset of English grammar into the former subset using discourse representation theory.
+
+        I developed a module in Python for the NeuroLang package consisting of an implementation of a non-deterministic parser and the transformations required for a small subset of the query language. It is sill an ongoing work and part of my computer science thesis at University of Buenos Aires.
+    }
+    {
+        Python - NeuroLang - Datalog - DSL - Open Source
+    }
+
+\jobdescription
+    { Software Developer }
+    { ADGS }
+    { Nov 2018 -- Feb 2020 }
+    { 
+        As a software developer at ADGS I worked helping to develop an unstructured search, semantic extraction and machine learning framework called TASMO. My job consisted primarily on developing a set of criteria for entity extraction from unstructured text and for connotation analysis for medical, financial and legal texts.
+    }
+    {
+        C\# - .Net Framework - Solr - OpenNLP - GATE - AWS - Azure
+    }
+
+\jobdescription
+    { Full Stack Developer }
+    { Trocafone S.A. }
+    { Jun 2016 -- Jan 2019 }
+    { 
+        As a software developer at Trocafone my work consisted mostly on developing features for the in-house ERP software. My focus was given to create opportunities of technological improvement seeking better efficiency in the SCM area. Between one of the biggest projects I had the pleasure to work on was the development and deployment in production of a microservice to centralize stock management.
+    }
+    {
+        PHP - Laravel - Python - Flask - Postgres - Jenkins - Docker
+    }
+
+\jobdescription
+    { Software Developer }
     { Infobiz S.A. }
-    { \textsc{} }{
-    \headedsubsection
-        { Software Developer }
-        { Nov 2013 -- Feb 2016 }
-        {
-            \jobdetail{
-                As a software developer at Infobiz (now Interprod) I helped with the development of the Ticket Games system  and some of the games that run on it. Ticket Games is a system similar to a slot machine but with a pre-printed outcome \href{https://web.archive.org/web/20180903134404/http://infobiz.com.ar/english/ticket_games.php}{\ExternalLink}.
+    { Nov 2013 -- Feb 2016 }
+    {
+        As a software developer at Infobiz (now Interprod) I helped with the development of the Ticket Games system  and some of the games that run on it. Ticket Games is a system similar to a slot machine but with a pre-printed outcome \href{https://web.archive.org/web/20180903134404/http://infobiz.com.ar/english/ticket_games.php}{\ExternalLink}.
 
-                
+        
 
-                Some of my contributions to the project where the following:
+        Some of my contributions to the project where the following:
+        Developed a library to print tickets on proprietary printer hardware and interface with anti-tampering sensors.
+        Developed a GTK\# application for the management of fonts and images loaded to the printer.
+        Developed a dashboard with Ember.js for monitoring hardware status and system events in the machines.
+        Collaborated with the architecture design of the whole system.
+        Developed and maintained a CI pipeline for various projects.
 
-                Developed a library to print tickets on proprietary printer hardware and interface with anti-tampering sensors
-                Developed a GTK\# application for the management of fonts and images loaded to the printer
-                Developed a dashboard with Ember.js for monitoring hardware status and system events in the machines
-                Collaborated with the architecture design of the whole system
-                Developed and maintained a CI pipeline for various projects
+        Apart from the work on Ticket Games, I worked on the migration from VB to VB.NET of an accounting software solution for gas stations.
+    }
+    {
+        C\# - .NET Framework - Mono - GTK\# - Ubuntu - HTML5 - Jenkins - Ember.js - VB.NET
+    }
 
-                Apart from the work on Ticket Games, I worked on the migration from VB to VB.NET of an accounting software solution for gas stations.
-            }{
-                C\# - .NET Framework - Mono - GTK\# - Ubuntu - HTML5 - Jenkins - Ember.js - VB.NET
-            }
-        }
-}
-
-\vspace{0.2em}
-\headedsection
+\jobdescription
+    { Trainee Software Developer }
     { Exo S.A. }
-    { \textsc{} }{
-    \headedsubsection
-        { Trainee Software Developer }
-        { Mar 2013 -- Jun 2013 }
-        {
-            \jobdetail{
-                As a trainee developer at EXO I had the pleasure to work with and learn from a small but very talented team helping to customize open source educational software.
-            }{
-                Python
-            }
-        }
-}
+    { Mar 2013 -- Jun 2013 }
+    {
+        As a trainee developer at EXO I had the pleasure to work with and learn from a small but very talented team helping to customize open source educational software.
+    }
+    {
+        Python
+    }
 
-\vspace{0.2em}
-\headedsection
+\jobdescription
+    { Freelance Software Developer }
     { Urban Technologies }
-    { \textsc{} }{
-    \headedsubsection
-        { Freelance Software Developer }
-        { 2013 - 2014}
-        {
-            \jobdetail{
-                Turn management system for queues and waiting rooms, made in Python
-                and HTML5 \href{https://web.archive.org/web/20180905152241/www.eitsa.com.ar/producto.php?c=3&p=14}{\ExternalLink}.
-            }{
-                Python - Flask - SqlServer - Unix
-            }
-        }
-}
+    { 2013 - 2014}
+    {
+        Turn management system for queues and waiting rooms, made in Python
+        and HTML5 \href{https://web.archive.org/web/20180905152241/www.eitsa.com.ar/producto.php?c=3&p=14}{\ExternalLink}.
+    }
+    {
+        Python - Flask - SqlServer - Unix
+    }
 
-\pagebreak
+
+
+\iffalse 
 
 \spacedhrule{0.8em}{-0.4em} % ...............................................................................
 
@@ -355,6 +339,7 @@ software.
         { 2012 }
         { \\ In individual and group categories -- held in Blas Pascal University, Córdoba, Argentina }
 }
+\fi
 
 
 \end{document}
