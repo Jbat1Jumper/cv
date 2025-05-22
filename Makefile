@@ -1,11 +1,11 @@
 
 all: cv_zdanovitch_nikita.pdf cv_zdanovitch_nikita_eng.pdf
 
-cv_zdanovitch_nikita_eng.pdf: cv_zdanovitch_nikita_eng.tex resume.sty
+cv_zdanovitch_nikita_eng.pdf: cv_zdanovitch_nikita_eng.tex cv_zdanovitch_nikita.aux resume.sty
 	pdflatex cv_zdanovitch_nikita_eng.tex
 
 
-cv_zdanovitch_nikita.pdf: cv_zdanovitch_nikita.tex resume.sty
+cv_zdanovitch_nikita.pdf: cv_zdanovitch_nikita.tex cv_zdanovitch_nikita.aux resume.sty
 	pdflatex cv_zdanovitch_nikita.tex
 
 clean:
